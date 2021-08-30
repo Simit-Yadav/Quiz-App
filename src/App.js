@@ -14,8 +14,14 @@ function App() {
 			<Layout>
 				<Switch>
 				<Route exact path="/">
-					This is Home route
-					
+					<div style={{fontSize: '2rem'}}>
+					Hey Everyone,
+					This is a small quiz app in which you can add questions for your revision. The app is completely responsive and made keeping in mind the ease of use. Try, it and share with your friends. Giving a small feedback and some features to update on sim5394yadav@gmail.com with will be a very great contribution.
+
+					Thanks
+					:)
+					..
+					</div>
 				</Route>
 				<Route path="/add">
 					<AddQuestion/>
