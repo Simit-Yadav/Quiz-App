@@ -20,7 +20,6 @@ function App() {
 
 					Thanks
 					:)
-					..
 					</div>
 				</Route>
 				<Route path="/add">
