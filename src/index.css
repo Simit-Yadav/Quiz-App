@@ -1,0 +1,66 @@
+*{
+	padding: 0;
+  	box-sizing: border-box;
+  	margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #311847 !important;
+  background-color: #E2C391 !important;
+}
+
+ul span {
+	font-size: 1.4rem !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.correct{
+	background-color: #9ce37d !important
+}
+
+.wrong{
+	background-color: #FF3333 !important
+}
+
+.text{
+	width: 100% !important;
+}
+
+.wrapper{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (min-width: 960px) {
+	.text{
+		width: 50% !important;
+	}
+
+	.wrapper{
+		width: 70%;
+	}
+}
+		
+
+
+
+
+/* 
+	gold crayola - E2C391
+	pale pink - EFD3D7
+	pale purple pantome  - FEEAFA
+	buff - EDD382
+	sandy brown - FC9E4F
+	fuzzy wuzzy - D36060
+	magolia - F5EFFF
+ */
