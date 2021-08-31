@@ -8,30 +8,30 @@ const Questions = () => {
 	const [questions,setQuestions] = useState({});
 	const [fetching,setFetching] = useState(true);
 
-	const url = `https://reviseapi.herokuapp.com/api/v1/questions/${lang}`;
 
-	const fetchQuestions = async () => {
-		try{
-			const res = await fetch(url);
-			const data = await res.json();
-			if('msg' in data){
-				setNotFound(true);
-				setQuestions({});
-			}else{
-				setQuestions(data);
-				setNotFound(false);
-				setFetching(false);
-			}
-		}catch(err){
-			setFetching(false);
-			console.log(err);
-		}
-
-	}
 
 	useEffect(() => {
+		const url = `https://reviseapi.herokuapp.com/api/v1/questions/${lang}`;
+		const fetchQuestions = async () => {
+			try{
+				const res = await fetch(url);
+				const data = await res.json();
+				if('msg' in data){
+					setNotFound(true);
+					setQuestions({});
+				}else{
+					setQuestions(data);
+					setNotFound(false);
+					setFetching(false);
+				}
+			}catch(err){
+				setFetching(false);
+				console.log(err);
+			}
+
+		}
 		fetchQuestions();
-	})
+	},[lang])
 
 
 	if(fetching){
