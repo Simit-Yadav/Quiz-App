@@ -109,7 +109,7 @@ const AddQuestion = () => {
 			}
 
 
-			axios.post("https://cors-anywhere.herokuapp.com/https://quiz-api.sy94.repl.co/api/v1/questions/add",data).then(data => setSuccess(data.data)).catch(err => setSuccess(err));
+			axios.post("https://reviseapi.herokuapp.com/api/v1/questions/add",data).then(data => setSuccess(data.data)).catch(err => setSuccess(err));
 			setLanguage('');
 			setQuestion('');
 			setOption1('')

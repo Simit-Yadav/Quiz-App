@@ -100,7 +100,7 @@ const Layout = ({children}) => {
 	const [list,setList] = useState([]);
 
 	useEffect(() => {
-		axios.get("https://cors-anywhere.herokuapp.com/https://quiz-api.sy94.repl.co/api/v1/questions")
+		axios.get("https://reviseapi.herokuapp.com/api/v1/questions")
 		.then(res => setList(res.data));
 		console.log(list);
 	},[])

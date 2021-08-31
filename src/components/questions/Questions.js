@@ -9,7 +9,7 @@ const Questions = () => {
 	const [questions,setQuestions] = useState({});
 	const [fetching,setFetching] = useState(true);
 
-	const url = `https://cors-anywhere.herokuapp.com/https://quiz-api.sy94.repl.co/api/v1/questions/${lang}`;
+	const url = `https://reviseapi.herokuapp.com/api/v1/questions/${lang}`;
 
 	const fetchQuestions = async () => {
 		try{
