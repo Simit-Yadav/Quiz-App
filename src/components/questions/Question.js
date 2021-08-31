@@ -1,27 +1,8 @@
-import React,{useState,useEffect} from 'react';
-import {Typography,Button,Grid,Paper} from '@material-ui/core';
+import React,{useState} from 'react';
+import {Typography,Button,Grid} from '@material-ui/core';
 import { makeStyles} from '@material-ui/core/styles';
 import WbIncandescentSharpIcon from '@material-ui/icons/WbIncandescentSharp';
 import CodeIcon from '@material-ui/icons/Code';
-
-const questions = {
-	question: 'Size of int?',
-	language: 'python',
-	options: [
-		{
-			option: 1,
-		},
-		{
-		option: 2,
-		},
-		{
-		option: 3,
-		},
-		{
-			option: 4
-		}
-	]
-}
 
 const useStyles = makeStyles((theme) => {
 	return {
@@ -38,7 +19,6 @@ const useStyles = makeStyles((theme) => {
 			width: '100%',
 			padding: theme.spacing(1.5),
 			textAlign: 'center',
-			color: '#FBF9FF',
 			backgroundColor: '#B3B7EE',
 			borderRadius: '1.5rem',
 			'&:hover': {
@@ -65,7 +45,6 @@ const Question = ({item}) => {
 	const {question,language,options,correct} = item;
 	const classes = useStyles();
 	const [selected,setSelected] = useState();
-	const [right,setRight] = useState(false);
 
 
 	const handleClick = (e) => {
@@ -73,7 +52,7 @@ const Question = ({item}) => {
 	}
 
 	const setClass = (e) => {
-		if(selected === e && selected == correct){
+		if(selected === e && selected === correct){
 			return 'correct'
 		}
 		

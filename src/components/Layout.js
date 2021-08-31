@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { Typography, Container } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
@@ -10,12 +9,10 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AppBar from '@material-ui/core/AppBar';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Link, useHistory,useLocation } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import axios from 'axios';
 
@@ -94,7 +91,7 @@ const Layout = ({children}) => {
 	const theme = useTheme();
 	const history = useHistory();
 	const location = useLocation();
-	const path = location.pathname != "/" ? location.pathname.slice(1).toUpperCase() : "Welcome";
+	const path = location.pathname !== "/" ? location.pathname.slice(1).toUpperCase() : "Welcome";
 	const [mobileOpen, setMobileOpen] = useState(false);
 	const [currentLanguage,setCurrentLanguage] = useState(path);
 	const [list,setList] = useState([]);
@@ -142,7 +139,7 @@ const Layout = ({children}) => {
 	return (
 		<div className={classes.root}>
 			<CssBaseline/>
-			<AppBar position="fixed" className={classes.appBar} disabledelevation>
+			<AppBar position="fixed" className={classes.appBar}>
 				<Toolbar>
 					<IconButton color="inherit" aria-label="open drawer" edge="start"
 					onClick={handleDrawerToggle} className={classes.menuButton}>

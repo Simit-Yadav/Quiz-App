@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import Question from './Question';
-import Opitons from './Options';
 
 const Questions = () => {
 	const {lang} = useParams();
