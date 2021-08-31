@@ -31,7 +31,7 @@ const Questions = () => {
 
 	useEffect(() => {
 		fetchQuestions();
-	},[lang])
+	})
 
 
 	if(fetching){

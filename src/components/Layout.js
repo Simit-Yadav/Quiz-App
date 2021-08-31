@@ -99,8 +99,7 @@ const Layout = ({children}) => {
 	useEffect(() => {
 		axios.get("https://reviseapi.herokuapp.com/api/v1/questions")
 		.then(res => setList(res.data));
-		console.log(list);
-	},[])
+	},[list])
 
 	const handleDrawerToggle = () => {
     	setMobileOpen(!mobileOpen);
