@@ -101,11 +101,11 @@ const AddQuestion = () => {
 
 		if(valid){
 			const data = {
-				language: language.toLowerCase(),
-				question: question.toLowerCase(),
-				options: [{option: option1.toLowerCase()},{option: option2.toLowerCase()},{option: option3.toLowerCase()},{option: option4.toLowerCase()}],
-				correct: correct.toLowerCase(),
-				credit: credit.toLowerCase()
+				"language": `${language.toLowerCase()}`,
+				"question": `${question.toLowerCase()}`,
+				"options": [{option: option1.toLowerCase()},{option: option2.toLowerCase()},{option: option3.toLowerCase()},{option: option4.toLowerCase()}],
+				"correct": `${correct.toLowerCase()}`,
+				"credit": `${credit.toLowerCase()}`
 			}
 
 
