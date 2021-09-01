@@ -101,15 +101,15 @@ const AddQuestion = () => {
 
 		if(valid){
 			const data = {
-				"language": `${language.toLowerCase()}`,
-				"question": `${question.toLowerCase()}`,
-				"options": [{option: option1.toLowerCase()},{option: option2.toLowerCase()},{option: option3.toLowerCase()},{option: option4.toLowerCase()}],
-				"correct": `${correct.toLowerCase()}`,
-				"credit": `${credit.toLowerCase()}`
+				language: language.toLowerCase(),
+				question: question.toLowerCase(),
+				options: [{option: option1.toLowerCase()},{option: option2.toLowerCase()},{option: option3.toLowerCase()},{option: option4.toLowerCase()}],
+				correct: correct.toLowerCase(),
+				credit: credit.toLowerCase()
 			}
 
 
-			axios.post("https://reviseapi.herokuapp.com/api/v1/questions/add",data).then(data => setSuccess(data.data)).catch(err => setSuccess(err));
+			axios.post("https://reviseapi.herokuapp.com/api/v1/questions/add",JSON.stringify(data)).then(data => setSuccess(data.data)).catch(err => setSuccess(err));
 			setLanguage('');
 			setQuestion('');
 			setOption1('')
