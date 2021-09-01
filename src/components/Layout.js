@@ -85,7 +85,6 @@ const useStyles = makeStyles((theme) => {
 
 
 
-
 const Layout = ({children}) => {
 	const classes = useStyles();
 	const theme = useTheme();
@@ -96,9 +95,10 @@ const Layout = ({children}) => {
 	const [currentLanguage,setCurrentLanguage] = useState(path);
 	const [list,setList] = useState([]);
 
+
 	useEffect(() => {
-		axios.get("https://reviseapi.herokuapp.com/api/v1/questions")
-		.then(res => setList(res.data));
+			axios.get("https://reviseapi.herokuapp.com/api/v1/questions")
+			.then(res => setList(res.data));			
 	},[])
 
 	const handleDrawerToggle = () => {
@@ -113,6 +113,9 @@ const Layout = ({children}) => {
 
 		history.push(`/${item}`);
 	}
+
+	
+
 
 	const drawer =  (
 		<div className={classes.drawerColor}>
@@ -133,6 +136,7 @@ const Layout = ({children}) => {
 			</List>
 		</div>
 	);
+
 
 
 	return (
