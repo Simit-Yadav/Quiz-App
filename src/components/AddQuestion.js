@@ -107,8 +107,8 @@ const AddQuestion = () => {
 				correct: correct.toLowerCase(),
 				credit: credit.toLowerCase()
 			}
-
-			axios.post("https://reviseapi.herokuapp.com/api/v1/questions/add",JSON.stringify(data)).then(data => setSuccess(data.data)).catch(err => setSuccess(err));
+			
+			axios.post("https://reviseapi.herokuapp.com/api/v1/questions/add",data).then(data => setSuccess(data.data)).catch(err => setSuccess(err));
 			// axios.post("https://quiz-api.sy94.repl.co/api/v1/questions/add",data).then(data => setSuccess(data.data)).catch(err => setSuccess(err));
 
 			setLanguage('');
